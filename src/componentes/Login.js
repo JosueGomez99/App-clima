@@ -11,7 +11,7 @@ const Login = ({ navigation }) => {
       if (username === 'Admin' && password === 'Admin123') {
         navigation.navigate('Home', { username: username });
       } else {
-        alert('Credenciales incorrectas');
+        alert('El correo o contraseña no coincide');
       }
     };
   
