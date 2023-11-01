@@ -10,7 +10,7 @@ import axios from "axios";
 
 const background = require("../../assets/fondo.jpg");
 
-const WeatherList = () => {
+const WeatherList = (props) => {
   const [dailyWeatherData, setDailyWeatherData] = useState([]);
   const API_KEY = "2d07fd4ca456de53bb156c6d2d8aaeac";
 

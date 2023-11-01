@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Button, ImageBackground, StyleSheet } from 'react-native';
 
-const Home = ({ route, navigation }) => {
+const Home = (props) => {
+  const { route, navigation } = props;
   const { username } = route.params;
 
   const goToWeatherList = () => {
@@ -14,9 +15,9 @@ const Home = ({ route, navigation }) => {
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
-        <Text  style={styles.heading}>Bienvenido: {username}</Text>
+        <Text style={styles.heading}>Bienvenido: {username}</Text>
         <Text style={styles.description}>
-          Aquí podrá visualizar el clima de la ciudad de Tegucigalpa,ademas de la temperatura
+          Aquí podrá visualizar el clima de la ciudad de Tegucigalpa, además de la temperatura
         </Text>
         <Button title="Ver Clima de la Semana" onPress={goToWeatherList} />
       </View>
