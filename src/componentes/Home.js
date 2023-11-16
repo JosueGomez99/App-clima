@@ -3,7 +3,7 @@ import { View, Text, Button, ImageBackground, StyleSheet } from 'react-native';
 
 const Home = (props) => {
   const { route, navigation } = props;
-  const { username } = route.params;
+  const { username } = route.params?.username || '';
 
   const goToWeatherList = () => {
     navigation.navigate('WeatherList');
@@ -19,7 +19,6 @@ const Home = (props) => {
         <Text style={styles.description}>
           Aquí podrá visualizar el clima de la ciudad de Tegucigalpa, además de la temperatura
         </Text>
-        <Button title="Ver Clima de la Semana" onPress={goToWeatherList} />
       </View>
     </ImageBackground>
   );
